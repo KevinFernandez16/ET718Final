@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @yacht.name %>
+</p>
+
+<p>
+  <strong>Designer:</strong>
+  <%= @yacht.designer %>
+</p>
+
+<p>
+  <strong>Length:</strong>
+  <%= @yacht.length %>
+</p>
+
+<p>
+  <strong>Draft:</strong>
+  <%= @yacht.draft %>
+</p>
+
+<p>
+  <strong>Fuel:</strong>
+  <%= @yacht.fuel %>
+</p>
+
+<p>
+  <strong>Beam:</strong>
+  <%= @yacht.beam %>
+</p>
+
+<%= link_to 'Edit', edit_yacht_path(@yacht) %> |
+<%= link_to 'Back', yachts_path %>

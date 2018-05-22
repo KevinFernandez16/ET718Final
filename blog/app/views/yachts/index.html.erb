@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+<div class="hero-section">
+  <div class="hero-section-text">
+    <h1>Yachts</h1>
+    <h5>Shop the best yachts in the world!!</h5>
+  </div>
+</div>
+
+
+<div class="marketing-site-hero">
+  <div class="marketing-site-hero-content">
+    <h1>Shop Here!</h1>
+    <p class="subheader">If you look down below, you can see our latest models!!!!</p>
+    <a href="#" class="round button">learn more</a>
+  </div>
+</div>
+
+
+<h1>Yachts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Designer</th>
+      <th>Length</th>
+      <th>Draft</th>
+      <th>Fuel</th>
+      <th>Beam</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @yachts.each do |yacht| %>
+      <tr>
+        <td><%= yacht.name %></td>
+        <td><%= yacht.designer %></td>
+        <td><%= yacht.length %></td>
+        <td><%= yacht.draft %></td>
+        <td><%= yacht.fuel %></td>
+        <td><%= yacht.beam %></td>
+        <td><%= link_to 'Show', yacht %></td>
+        <td><%= link_to 'Edit', edit_yacht_path(yacht) %></td>
+        <td><%= link_to 'Destroy', yacht, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Yacht', new_yacht_path %>

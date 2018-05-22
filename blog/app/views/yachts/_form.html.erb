@@ -1,0 +1,47 @@
+<%= form_with(model: yacht, local: true) do |form| %>
+  <% if yacht.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(yacht.errors.count, "error") %> prohibited this yacht from being saved:</h2>
+
+      <ul>
+      <% yacht.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :yacht_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :designer %>
+    <%= form.text_field :designer, id: :yacht_designer %>
+  </div>
+
+  <div class="field">
+    <%= form.label :length %>
+    <%= form.text_field :length, id: :yacht_length %>
+  </div>
+
+  <div class="field">
+    <%= form.label :draft %>
+    <%= form.text_field :draft, id: :yacht_draft %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fuel %>
+    <%= form.text_field :fuel, id: :yacht_fuel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :beam %>
+    <%= form.text_field :beam, id: :yacht_beam %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
